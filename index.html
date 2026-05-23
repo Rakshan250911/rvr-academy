@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>RVR Academy</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <div class="logo">
+      RVR'S ACADEMY
+    </div>
+    <div class="menu-toggle">
+
+  &#9776;
+
+</div>
+
+    <ul class="nav-links">
+
+      <li>
+        <a href="#home">Home</a>
+      </li>
+
+      <li>
+        <a href="#courses">Courses</a>
+      </li>
+
+      <li>
+        <a href="#about">About</a>
+      </li>
+
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+
+    </ul>
+
+  </nav>
+
+  <section id="home" class="hero">
+
+  <div class="hero-content">
+
+    <h1>
+      Build Your Future With RVR'S ACADEMY
+    </h1>
+
+    <p>
+      Tuition, Computer Courses, Spoken English,
+      Chess, Dance, Music and More.
+    </p>
+
+    <button>
+      Join Now
+    </button>
+
+  </div>
+
+    </section>
+
+    <section id="courses" class="courses reveal">
+
+  <h2>Our Courses</h2>
+
+  <div class="course-container">
+
+    <div class="course-card">
+      <h3>Tuition</h3>
+      <p>
+        Personal attention and academic excellence.
+      </p>
+    </div>
+
+    <div class="course-card">
+      <h3>Computer Courses</h3>
+      <p>
+        Learn computer skills and technology basics.
+      </p>
+    </div>
+
+    <div class="course-card">
+      <h3>Spoken English</h3>
+      <p>
+        Improve communication and confidence.
+      </p>
+    </div>
+
+    <div class="course-card">
+      <h3>Chess</h3>
+      <p>
+        Develop concentration and strategic thinking.
+      </p>
+    </div>
+
+  </div>
+
+    </section>
+
+    <section id="about" class="about reveal">
+
+  <div class="about-text">
+
+    <h2>About Our Academy</h2>
+
+    <p>
+      RVR'S COMPUTER EDUCATION & TUITION CENTRE
+      provides quality education and skill development
+      for students of all ages.
+    </p>
+
+    <p>
+      We offer tuition, computer courses,
+      spoken English, chess, dance,
+      music, Vedic Maths and more.
+    </p>
+
+    <button>Learn More</button>
+
+  </div>
+
+</section>
+<section id="contact" class="contact reveal">
+
+  <h2>Contact Us</h2>
+
+  <form class="contact-form" id="contactForm">
+
+  <input
+    type="text"
+    placeholder="Your Name"
+    id="name"
+  >
+
+  <input
+    type="email"
+    placeholder="Your Email"
+    id="email"
+  >
+
+  <textarea
+    placeholder="Your Message"
+    id="message"
+  ></textarea>
+
+  <button type="submit">
+    Send Message
+  </button>
+
+</form>
+
+</section>
+<a
+  href="https://wa.me/919345107543"
+  class="whatsapp-btn"
+  target="_blank"
+>
+  WhatsApp
+</a>
+<footer class="footer">
+
+  <p>
+    © 2026 RVR'S COMPUTER EDUCATION & TUITION CENTRE
+  </p>
+
+</footer>
+<script type="module">
+
+  import { initializeApp }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+  import {
+    getFirestore,
+    collection,
+    addDoc
+  }
+  from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+
+  const firebaseConfig = {
+  apiKey: "AIzaSyDZB-qSgo7zj6DoXOgOluJfMbeXV19l-pU",
+  authDomain: "rvr-academy.firebaseapp.com",
+  projectId: "rvr-academy",
+  storageBucket: "rvr-academy.firebasestorage.app",
+  messagingSenderId: "563197390476",
+  appId: "1:563197390476:web:c7d893fcd81be9692f95a9",
+  measurementId: "G-DJBB2CPD0K"
+};
+
+  const app =
+  initializeApp(firebaseConfig);
+
+  const db =
+  getFirestore(app);
+
+  const form =
+  document.getElementById("contactForm");
+
+  form.addEventListener("submit", async (e) => {
+
+    e.preventDefault();
+
+    const name =
+    document.getElementById("name").value;
+
+    const email =
+    document.getElementById("email").value;
+
+    const message =
+    document.getElementById("message").value;
+
+    try{
+
+      await addDoc(
+        collection(db, "messages"),
+        {
+          name,
+          email,
+          message
+        }
+      );
+
+      alert("Message Sent Successfully!");
+
+      form.reset();
+
+    }catch(error){
+
+      alert("Error sending message");
+    }
+
+  });
+
+</script>
+<script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+html{
+  scroll-behavior:smooth;
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:Arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  background:#002b5b;
+
+  padding:20px 8%;
+
+  position:sticky;
+
+top:0;
+
+z-index:1000;
+}
+
+.logo{
+  color:white;
+  font-size:24px;
+  font-weight:bold;
+}
+
+.nav-links a{
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:18px;
+
+  transition:0.3s;
+
+  position:relative;
+}
+
+
+
+.nav-links a:hover{
+
+  color:rgb(254, 132, 1);
+}
+/* HERO SECTION */
+
+.hero{
+
+  height:90vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  background:#4f8cd2
+}
+
+.hero-content h1{
+
+  font-size:70px;
+
+  margin-bottom:20px;
+}
+
+.hero-content p{
+
+  font-size:22px;
+
+  margin-bottom:30px;
+}
+
+.hero-content button{
+
+  padding:15px 35px;
+
+  border:none;
+
+  border-radius:8px;
+
+  background:orange;
+
+  color:white;
+
+  font-size:18px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.hero-content button:hover{
+
+  background:#ff8800;
+
+  transform:scale(1.05);
+}
+/* COURSES SECTION */
+
+.courses{
+
+  padding:80px 8%;
+
+  background:#4f8cd2    ;
+}
+
+.courses h2{
+
+  text-align:center;
+
+  font-size:40px;
+
+  margin-bottom:50px;
+
+  color:#002b5b;
+}
+
+.course-container{
+
+  display:flex;
+
+  gap:30px;
+
+  flex-wrap:wrap;
+
+  justify-content:center;
+}
+
+.course-card{
+
+  background:white;
+
+  width:260px;
+
+  padding:30px;
+
+  border-radius:15px;
+
+  text-align:center;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+  transition:0.3s;
+}
+
+.course-card:hover{
+
+  transform:translateY(-10px);
+}
+
+.course-card h3{
+
+  margin-bottom:15px;
+
+  color:#002b5b;
+}
+/* ABOUT SECTION */
+
+.about{
+
+  padding:80px 8%;
+
+  background:#4f8cd2;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+}
+
+.about-text{
+
+  max-width:700px;
+
+  text-align:center;
+}
+
+.about-text h2{
+
+  font-size:42px;
+
+  color:#002b5b;
+
+  margin-bottom:25px;
+}
+
+.about-text p{
+
+  font-size:18px;
+
+  line-height:1.8;
+
+  margin-bottom:20px;
+
+  color:#ffffff;
+}
+
+.about-text button{
+
+  padding:15px 35px;
+
+  border:none;
+
+  border-radius:8px;
+
+  background:#002b5b;
+
+  color:white;
+
+  font-size:18px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.about-text button:hover{
+
+  background:#0a4d8c;
+}
+/* CONTACT SECTION */
+
+.contact{
+
+  padding:80px 8%;
+
+  background:#4f8cd2;
+
+  text-align:center;
+}
+
+.contact h2{
+
+  font-size:42px;
+
+  color:#002b5b;
+
+  margin-bottom:40px;
+}
+
+.contact-form{
+
+  max-width:600px;
+
+  margin:auto;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+  padding:15px;
+
+  border:1px solid #ccc;
+
+  border-radius:8px;
+
+  font-size:16px;
+}
+
+.contact-form textarea{
+
+  height:150px;
+
+  resize:none;
+}
+
+.contact-form button{
+
+  padding:15px;
+
+  border:none;
+
+  border-radius:8px;
+
+  background:#002b5b;
+
+  color:white;
+
+  font-size:18px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.contact-form button:hover{
+
+  background:#0a4d8c;
+}
+/* FOOTER */
+
+.footer{
+
+  background:#002b5b;
+
+  color:white;
+
+  text-align:center;
+
+  padding:25px;
+}
+/* HAMBURGER MENU */
+
+.menu-toggle{
+
+  display:none;
+
+  font-size:30px;
+
+  color:white;
+
+  cursor:pointer;
+
+}
+/* RESPONSIVE DESIGN */
+
+@media (max-width:768px){
+
+  .navbar{
+
+    position:relative;
+  }
+
+  .menu-toggle{
+
+    display:block;
+
+    font-size:32px;
+  }
+
+  .nav-links{
+
+    display:none;
+
+    flex-direction:column;
+
+    position:absolute;
+
+    top:80px;
+
+    right:0;
+
+    width:220px;
+
+    background:#002b5b;
+
+    padding:20px;
+
+    gap:20px;
+
+    border-radius:10px;
+  }
+
+  .nav-links a.active{
+
+  color:orange;
+}
+
+  .hero-content h1{
+
+    font-size:45px;
+  }
+
+  .hero-content p{
+
+    font-size:18px;
+  }
+
+  .courses h2,
+  .about-text h2,
+  .contact h2{
+
+    font-size:32px;
+  }
+
+  .course-card{
+
+    width:100%;
+  }
+
+}
+/* WHATSAPP BUTTON */
+
+.whatsapp-btn{
+
+  position:fixed;
+
+  bottom:20px;
+
+  right:20px;
+
+  background:#25D366;
+
+  color:white;
+
+  padding:15px 20px;
+
+  border-radius:50px;
+
+  text-decoration:none;
+
+  font-weight:bold;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+
+  transition:0.3s;
+
+  z-index:1000;
+}
+
+.whatsapp-btn:hover{
+
+  transform:scale(1.1);
+}
+/* SCROLL REVEAL */
+
+.reveal{
+
+  opacity:0;
+
+  transform:translateY(100px);
+
+  transition:all 1s ease;
+}
+
+.reveal.active{
+
+  opacity:1;
+
+  transform:translateY(0);
+}
