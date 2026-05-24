@@ -33,9 +33,29 @@ z-index:1000;
 }
 
 .logo{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:12px;
+
   color:white;
+
   font-size:24px;
+
   font-weight:bold;
+}
+
+.logo img{
+
+  width:55px;
+
+  height:55px;
+
+  object-fit:cover;
+
+  border-radius:50%;
 }
 
 .nav-links a{
