@@ -2,7 +2,10 @@
 <html lang="en">
 
 <head>
-
+  <link
+  rel="icon"
+  href="images/logo.png"
+>
   <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -140,17 +143,20 @@
     type="text"
     placeholder="Your Name"
     id="name"
+    required
   >
 
   <input
     type="email"
     placeholder="Your Email"
     id="email"
+    required
   >
 
   <textarea
     placeholder="Your Message"
     id="message"
+    required
   ></textarea>
 
   <button type="submit">
@@ -164,6 +170,8 @@
   href="https://wa.me/919345107543"
   class="whatsapp-btn"
   target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
 >
   WhatsApp
 </a>
