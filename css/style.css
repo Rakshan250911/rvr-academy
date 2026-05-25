@@ -55,6 +55,8 @@ z-index:1000;
 
   object-fit:contain;
 
+  border-radius:50%;
+
 }
 
 .nav-links a{
