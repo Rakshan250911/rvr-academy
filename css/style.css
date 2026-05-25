@@ -21,7 +21,7 @@ body{
 
   align-items:center;
 
-  background:rgb(110, 228, 208);
+  background:rgb(255, 255, 255);
 
   padding:20px 8%;
 
@@ -92,7 +92,7 @@ z-index:1000;
 
   text-align:center;
 
-  background:rgb(73, 112, 255)
+  background:#5B8FD1
 }
 
 .hero-content h1{
