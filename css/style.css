@@ -49,11 +49,11 @@ z-index:1000;
 
 .logo img{
 
-  width:200px;
+  width:120px;
 
-  height:200px;
+  height:auto;
 
-  object-fit:cover;
+  object-fit:contain;
 
 }
 
