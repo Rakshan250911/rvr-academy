@@ -73,3 +73,22 @@ window.addEventListener("scroll", () => {
   });
 
 });
+
+const popup =
+document.getElementById("popup");
+
+const openPopup =
+document.getElementById("openPopup");
+
+const closePopup =
+document.getElementById("closePopup");
+
+openPopup.addEventListener("click", () => {
+
+  popup.style.display = "flex";
+});
+
+closePopup.addEventListener("click", () => {
+
+  popup.style.display = "none";
+});
