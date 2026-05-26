@@ -410,27 +410,42 @@ padding:80px 6%;
 
   .nav-links{
 
-    display:none;
+  display:none;
 
-    flex-direction:column;
+  flex-direction:column;
 
-    position:absolute;
+  position:absolute;
 
-    top:80px;
+  top:80px;
 
-    right:0;
+  right:6%;
 
-    width:220px;
+  background:#0F4C81;
 
-    background:#002b5b;
+  width:220px;
 
-    padding:20px;
+  padding:20px;
 
-    gap:20px;
+  border-radius:10px;
 
-    border-radius:10px;
-  }
+  gap:20px;
+}
 
+.nav-links.active{
+
+  display:flex;
+}
+
+.menu-toggle{
+
+  display:block;
+
+  font-size:30px;
+
+  color:white;
+
+  cursor:pointer;
+}
   .nav-links a.active{
 
   color:orange;
