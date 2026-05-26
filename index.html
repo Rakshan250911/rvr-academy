@@ -272,7 +272,7 @@
     document.getElementById("name").value;
 
     const phone =
-document.getElementById("phone").value;
+    document.getElementById("phone").value;
 
     const message =
     document.getElementById("message").value;
@@ -282,10 +282,10 @@ document.getElementById("phone").value;
       await addDoc(
         collection(db, "messages"),
         {
-  name,
-  phone,
-  message
-}
+          name,
+          phone,
+          message
+        }
       );
 
       alert("Message Sent Successfully!");
