@@ -21,15 +21,17 @@ body{
 
   align-items:center;
 
-  background:rgb(255, 255, 255);
+  padding:14px 6%;
 
-  padding:12px 6%;
+  background:white;
+
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
 
   position:sticky;
 
-top:0;
+  top:0;
 
-z-index:1000;
+  z-index:1000;
 }
 
 .logo{
@@ -38,31 +40,28 @@ z-index:1000;
 
   align-items:center;
 
-  gap:12px;
+  gap:14px;
 
-  color:rgb(0, 0, 0);
+  font-size:20px;
 
-  font-size:30px;
+  font-weight:700;
 
-  font-weight:bold;
+  color:#111827;
 }
 
 .logo img{
 
-  width:90px;
+  width:70px;
 
   height:auto;
 
   object-fit:contain;
-
-  border-radius:50%;
-
 }
 .nav-links{
 
   display:flex;
 
-  gap:30px;
+  gap:35px;
 
   list-style:none;
 
@@ -71,22 +70,22 @@ z-index:1000;
 
 .nav-links a{
 
-  color:rgb(6, 17, 171);
-
   text-decoration:none;
+
+  color:#1E3A8A;
 
   font-size:18px;
 
-  transition:0.3s;
+  font-weight:600;
 
-  position:relative;
+  transition:0.3s;
 }
 
 
 
 .nav-links a:hover{
 
-  color:rgb(254, 132, 1);
+  color:#F59E0B;
 }
 /* HERO SECTION */
 
