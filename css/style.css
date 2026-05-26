@@ -24,12 +24,12 @@ body{
   padding:14px 6%;
 
   background:linear-gradient(
-  90deg,
-  #0F4C81,
-  #2563EB
-);
+    90deg,
+    #0F4C81,
+    #2563EB
+  );
 
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  box-shadow:0 2px 10px rgba(0,0,0,0.15);
 
   position:sticky;
 
