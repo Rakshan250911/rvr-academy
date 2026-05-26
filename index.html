@@ -299,6 +299,44 @@
 
   });
 
+  const joinForm =
+document.getElementById("joinForm");
+
+joinForm.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const joinName =
+  document.getElementById("joinName").value;
+
+  const joinPhone =
+  document.getElementById("joinPhone").value;
+
+  const joinCourse =
+  document.getElementById("joinCourse").value;
+
+  try{
+
+    await addDoc(
+      collection(db, "admissions"),
+      {
+        name: joinName,
+        phone: joinPhone,
+        course: joinCourse
+      }
+    );
+
+    alert("Admission Request Sent!");
+
+    joinForm.reset();
+
+  }catch(error){
+
+    alert("Error sending request");
+  }
+
+});
+
 </script>
 <script src="js/script.js"></script>
 </body>
