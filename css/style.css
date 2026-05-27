@@ -103,18 +103,23 @@ body{
 
 .hero{
 
-  min-height:85vh;
-padding:80px 6%;
+  height:100vh;
+
+  background:url("../images/hero-bg.png");
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
 
   display:flex;
 
   justify-content:center;
 
-  align-items:center;
+  align-items:flex-end;
 
-  text-align:center;
-
-  background:#6EA8E5;
+  padding-bottom:80px;
 }
 .hero-content{
 
@@ -143,30 +148,32 @@ padding:80px 6%;
   margin-bottom:30px;
 }
 
-.hero-content button{
+.hero-btn{
 
-  padding:15px 35px;
+  padding:16px 40px;
 
   border:none;
 
-  border-radius:8px;
+  border-radius:10px;
 
-  background:orange;
+  background:#ff9800;
 
   color:white;
 
-  font-size:18px;
+  font-size:20px;
 
   cursor:pointer;
 
   transition:0.3s;
+
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
 }
 
-.hero-content button:hover{
+.hero-btn:hover{
 
-  background:#ff8800;
+  background:#e68900;
 
-  transform:scale(1.05);
+  transform:translateY(-3px);
 }
 /* COURSES SECTION */
 
