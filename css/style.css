@@ -181,7 +181,18 @@ body{
 
   padding:80px 8%;
 
-  background:#6EA8E5    ;
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.65)
+  ),
+  url("../images/courses-bg.png");
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
 }
 
 .courses h2{
@@ -192,7 +203,7 @@ body{
 
   margin-bottom:50px;
 
-  color:#002b5b;
+  color:#ffffff;
 }
 
 .course-container{
@@ -208,7 +219,13 @@ body{
 
 .course-card{
 
-  background:white;
+  background:rgba(255,255,255,0.12);
+
+backdrop-filter:blur(8px);
+
+border:1px solid rgba(255,255,255,0.2);
+
+color:white;
 
   width:260px;
 
