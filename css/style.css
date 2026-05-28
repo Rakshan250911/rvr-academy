@@ -136,7 +136,7 @@ text-align:left;
 .hero-content h1,
   .hero-content p{
 
-    display:none;
+    display:block;
   }
 
 .hero-btn{
