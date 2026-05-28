@@ -467,8 +467,16 @@ color:white;
 }
 .hero{
 
-  background-position:65% center;
-  height:85vh;
+    background:url("../images/mobile-hero.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    height:100vh;
+  }
 
 }
 
