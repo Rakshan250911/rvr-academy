@@ -133,25 +133,11 @@ body{
 text-align:left;
 }
 
-.hero-content h1{
+.hero-content h1,
+  .hero-content p{
 
-  font-size:56px;
-
-  line-height:1.2;
-
-  max-width:1000px;
-
-  margin:auto;
-
-  margin-bottom:25px;
-}
-
-.hero-content p{
-
-  font-size:22px;
-
-  margin-bottom:30px;
-}
+    display:none;
+  }
 
 .hero-btn{
 
