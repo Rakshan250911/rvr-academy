@@ -84,7 +84,7 @@ body{
 
   text-decoration:none;
 
-  color:#1E3A8A;
+  color:#ffffff;
 
   font-size:18px;
 
@@ -97,7 +97,9 @@ body{
 
 .nav-links a:hover{
 
-  color:#F59E0B;
+  color:#FFD166;
+
+  transform:translateY(-2px);
 }
 /* HERO SECTION */
 
@@ -126,6 +128,9 @@ body{
   max-width:1000px;
 
   margin:auto;
+  color:white;
+
+text-align:left;
 }
 
 .hero-content h1{
