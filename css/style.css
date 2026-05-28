@@ -105,7 +105,12 @@ body{
 
   height:100vh;
 
-  background:url("../images/hero-bg.png");
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.45)
+  ),
+  url("../images/hero-bg.png");
 
   background-size:cover;
 
@@ -115,37 +120,37 @@ body{
 
   display:flex;
 
-  justify-content:center;
+  align-items:center;
 
-  align-items:flex-end;
-
-  padding-bottom:80px;
+  padding:0 8%;
 }
 .hero-content{
 
-  max-width:1000px;
+  max-width:650px;
 
-  margin:auto;
+  color:white;
 }
 
 .hero-content h1{
 
-  font-size:56px;
+  font-size:72px;
 
-  line-height:1.2;
-
-  max-width:1000px;
-
-  margin:auto;
+  line-height:1.1;
 
   margin-bottom:25px;
+
+  font-weight:800;
 }
 
 .hero-content p{
 
   font-size:22px;
 
-  margin-bottom:30px;
+  line-height:1.6;
+
+  margin-bottom:35px;
+
+  color:#f0f0f0;
 }
 
 .hero-btn{
@@ -162,18 +167,20 @@ body{
 
   font-size:20px;
 
+  font-weight:bold;
+
   cursor:pointer;
 
   transition:0.3s;
 
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
 .hero-btn:hover{
 
   background:#e68900;
 
-  transform:translateY(-3px);
+  transform:translateY(-4px);
 }
 /* COURSES SECTION */
 
@@ -476,14 +483,15 @@ color:white;
 }
 .hero{
 
-  background-position:65% center;
-  height:85vh;
+    background-position:65% center;
 
-}
+    padding:0 6%;
+
+  }
 
   .hero-content h1{
 
-    font-size:45px;
+    font-size:42px;
   }
 
   .hero-content p{
