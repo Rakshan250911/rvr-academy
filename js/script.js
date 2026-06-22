@@ -1,94 +1,26 @@
-const menuToggle =
-document.querySelector(".menu-toggle");
+const joinForm = document.getElementById("joinForm");
 
-const navLinks =
-document.querySelector(".nav-links");
+joinForm.addEventListener("submit", (e) => {
 
-menuToggle.addEventListener("click", () => {
+    e.preventDefault();
 
-  navLinks.classList.toggle("active");
+    const name = document.getElementById("joinName").value;
+    const standard = document.getElementById("joinStandard").value;
+    const course = document.getElementById("joinCourse").value;
 
-});
-const reveals =
-document.querySelectorAll(".reveal");
+    const message =
+`Hello RVR'S ACADEMY,
 
-window.addEventListener("scroll", () => {
+I would like to join.
 
-  reveals.forEach((section) => {
+Name: ${name}
+Standard: ${standard}
+Course: ${course}`;
 
-    const windowHeight =
-    window.innerHeight;
+    const whatsappURL =
+`https://wa.me/919345107543?text=${encodeURIComponent(message)}`;
 
-    const revealTop =
-    section.getBoundingClientRect().top;
+    window.open(whatsappURL, "_blank");
 
-    const revealPoint = 150;
-
-    if(revealTop < windowHeight - revealPoint){
-
-      section.classList.add("active");
-
-    }
-
-  });
-
-});
-const sections =
-document.querySelectorAll("section");
-
-const navItems =
-document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-
-  let current = "";
-
-  sections.forEach((section) => {
-
-    const sectionTop =
-    section.offsetTop;
-
-    const sectionHeight =
-    section.clientHeight;
-
-    if(pageYOffset >= sectionTop - 200){
-
-      current = section.getAttribute("id");
-    }
-
-  });
-
-  navItems.forEach((link) => {
-
-    link.classList.remove("active");
-
-    if(
-      link.getAttribute("href")
-      === `#${current}`
-    ){
-
-      link.classList.add("active");
-    }
-
-  });
-
-});
-
-const popup =
-document.getElementById("popup");
-
-const openPopup =
-document.getElementById("openPopup");
-
-const closePopup =
-document.getElementById("closePopup");
-
-openPopup.addEventListener("click", () => {
-
-  popup.style.display = "flex";
-});
-
-closePopup.addEventListener("click", () => {
-
-  popup.style.display = "none";
+    joinForm.reset();
 });
