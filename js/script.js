@@ -119,3 +119,31 @@ Course: ${course}`;
 
     joinForm.reset();
 });
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", (e) => {
+
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const message = document.getElementById("message").value;
+
+  const whatsappMessage =
+`Hello RVR'S ACADEMY,
+
+Name: ${name}
+Phone: ${phone}
+
+Message:
+${message}`;
+
+  const whatsappURL =
+`https://wa.me/919345107543?text=${encodeURIComponent(whatsappMessage)}`;
+
+  window.open(whatsappURL, "_blank");
+
+  contactForm.reset();
+
+});
